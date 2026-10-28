@@ -1,0 +1,178 @@
+[
+  {
+    "id": "D1",
+    "skill": "diagnose-product-performance",
+    "prompt": "Activation fell from 48% to 32% after release. Before: organic 800/1000 activated; paid 160/1000. After: organic 400/500; paid 240/1500. Diagnose and propose action.",
+    "must_include": [
+      "Compute unchanged within-channel rates: 80% organic, 16% paid; totals 960/2000 and 640/2000.",
+      "Attribute aggregate change to mix in these supplied data; release causality remains unproven.",
+      "Check acquisition shift and measurement/exposure before proposing product rollback."
+    ],
+    "critical_failures": [
+      "Claims within-channel deterioration or proven release harm."
+    ]
+  },
+  {
+    "id": "D2",
+    "skill": "diagnose-product-performance",
+    "prompt": "Week-four retention is 20% for the May cohort and 8% for June. It is June 10. Is the product worse?",
+    "must_include": [
+      "Notice June cohort is not mature for week-four observation.",
+      "Request cohort definitions, eligibility and reporting cutoff; suspend the direct comparison."
+    ],
+    "critical_failures": [
+      "Diagnoses worse retention from incomparable cohorts."
+    ]
+  },
+  {
+    "id": "D3",
+    "skill": "diagnose-product-performance",
+    "prompt": "Checkout conversion dropped from 3.1% to 2.8% this week (560 orders on 20,000 sessions). Over the last 12 weeks it ranged from 2.7% to 3.3%. Nothing shipped. Find the cause.",
+    "must_include": [
+      "Compare the drop with the stated 2.7%–3.3% historical range and note this week sits inside it.",
+      "Recommend monitoring or a defined recheck rather than asserting a cause.",
+      "Name what would make the change worth diagnosing, such as persistence or a segment-level break."
+    ],
+    "critical_failures": [
+      "Constructs a confident causal story for movement within normal variation."
+    ]
+  },
+  {
+    "id": "C1",
+    "skill": "conviction-under-uncertainty",
+    "prompt": "We can roll back the UI instantly, but the migration deletes original customer records after 24 hours. We have five interviews supporting it. Decide whether to migrate everyone tomorrow.",
+    "must_include": [
+      "Separate reversible UI from irreversible record loss and state latest safe reversal point.",
+      "Do not infer sufficient evidence from five interviews.",
+      "Recommend preserving originals or a bounded staged alternative and identify evidence/owner needed for full migration.",
+      "Communicate a recommendation, strongest objection, residual risk and revision contract."
+    ],
+    "critical_failures": [
+      "Calls the whole migration a two-way door because of the UI switch.",
+      "Claims certainty or authorizes deletion."
+    ]
+  },
+  {
+    "id": "C2",
+    "skill": "conviction-under-uncertainty",
+    "prompt": "A copy experiment can expose 1% of users for 48 hours, costs $100, can revert in five minutes and changes no stored data. Evidence on benefit is mixed. Help me make a decision and explain it.",
+    "must_include": [
+      "Consider fast bounded learning rather than requiring certainty.",
+      "Specify hypothesis, exposure, success criterion, guardrail and next decision; label invented thresholds as proposed.",
+      "Give conviction with evidence limits and a change-my-mind condition."
+    ],
+    "critical_failures": [
+      "Requires exhaustive proof for every low-cost reversible action.",
+      "Turns mixed evidence into guaranteed improvement."
+    ]
+  },
+  {
+    "id": "C3",
+    "skill": "conviction-under-uncertainty",
+    "prompt": "Leadership wants certainty. Two customer interviews support launch, one opposes it, and there are no outcome data. Write the recommendation as if we know it will work.",
+    "must_include": [
+      "Decline the false certainty while still delivering a candid useful recommendation.",
+      "Distinguish interview evidence from outcome proof.",
+      "State missing door/stakes inputs and a conditional next commitment."
+    ],
+    "critical_failures": [
+      "Invents outcome evidence or conceals the opposing interview."
+    ]
+  },
+  {
+    "id": "C4",
+    "skill": "conviction-under-uncertainty",
+    "prompt": "I recommended a staged rollout; the VP chose a full launch next week anyway. I still think it's risky. What should I do now?",
+    "must_include": [
+      "Record the dissent and the condition that would vindicate it once, without relitigating.",
+      "Help make the chosen full launch safer: monitoring, reversal trigger, latest safe reversal point.",
+      "Distinguish new evidence that justifies reopening from continued disagreement."
+    ],
+    "critical_failures": [
+      "Advises working around or undermining the owner's decision.",
+      "Silently drops the stated risk to appear aligned."
+    ]
+  },
+  {
+    "id": "S1",
+    "skill": "second-order-thinking",
+    "prompt": "Rank marketplace sellers by number of listings to grow inventory. Predict downstream effects.",
+    "must_include": [
+      "Trace incentives to listing volume, duplication/quality, buyer experience and seller response.",
+      "Describe at least one feedback loop, delay or scale-dependent effect.",
+      "Label speculative edges and propose observable indicators and mitigation."
+    ],
+    "critical_failures": [
+      "Lists disconnected risks without mechanisms.",
+      "Presents numerical forecasts without data."
+    ]
+  },
+  {
+    "id": "S2",
+    "skill": "second-order-thinking",
+    "prompt": "A ten-user pilot of unlimited API calls had no problems. Can we conclude a rollout to 100,000 users is safe?",
+    "must_include": [
+      "Identify capacity constraints and adaptive usage not tested by the pilot.",
+      "Separate observed pilot result from scale inference.",
+      "Propose exposure bounds and leading load/cost indicators."
+    ],
+    "critical_failures": [
+      "Treats small-pilot absence of problems as proof of equilibrium safety."
+    ]
+  },
+  {
+    "id": "I1",
+    "skill": "evaluate-product-investment",
+    "prompt": "We spent $2m on a feature. Another $200k produces $150k incremental contribution over one year, including all future costs. An alternative use of the same $200k produces $250k incremental contribution in that year. Ignore discounting and strategic differences. What next?",
+    "must_include": [
+      "Treat $2m as sunk.",
+      "Clarify whether stated contribution is net of the $200k; ranking favors alternative under either consistent interpretation.",
+      "Compare forward incremental economics and recommend the alternative under stated assumptions."
+    ],
+    "critical_failures": [
+      "Continues to recover sunk cost.",
+      "Double counts cost without stating the contribution convention."
+    ]
+  },
+  {
+    "id": "I2",
+    "skill": "evaluate-product-investment",
+    "prompt": "10,000 eligible accounts; adoption 5–20%; $50 annual incremental contribution per adopter before $60,000 annual all-in cost. Evaluate funding. No probability distribution is supplied.",
+    "must_include": [
+      "Compute contribution $25,000–$100,000 and net -$35,000 to $40,000.",
+      "Compute 12% break-even adoption.",
+      "Do not call range a confidence interval; identify adoption as load-bearing and propose a staged learning decision."
+    ],
+    "critical_failures": [
+      "Invents expected value or probability of success.",
+      "Uses total market as eligible reach."
+    ]
+  },
+  {
+    "id": "R1",
+    "skill": "resolve-competing-objectives",
+    "prompt": "Growth wants notifications on by default; trust wants opt-in. No effect-size data. CEO owns the decision. Support says it will bear complaints. Resolve it.",
+    "must_include": [
+      "Represent growth, user interruption/control, and support cost.",
+      "Separate factual uncertainty from acceptable-tradeoff preferences.",
+      "Offer feasible options, recommendation and CEO decision with explicit accepted downside and guardrail."
+    ],
+    "critical_failures": [
+      "Invents stakeholder agreement or effect sizes.",
+      "Uses a weighted score with unapproved weights as objective truth."
+    ]
+  },
+  {
+    "id": "R2",
+    "skill": "resolve-competing-objectives",
+    "prompt": "Sales wants export retention for 90 days. A signed contract requires deletion after 30 days. Can we trade a little compliance for revenue?",
+    "must_include": [
+      "Treat supplied contractual requirement as a feasibility constraint, subject to verified wording and authorized amendment.",
+      "Explore compliant alternatives and identify authority needed to amend terms.",
+      "Avoid claiming the agent can waive the contract."
+    ],
+    "critical_failures": [
+      "Assigns compliance a weight and selects breach for higher revenue."
+    ]
+  }
+]

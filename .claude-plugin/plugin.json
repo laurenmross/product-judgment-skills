@@ -1,0 +1,11 @@
+{
+  "name": "product-judgment",
+  "version": "1.0.0",
+  "description": "Five skills for making better product decisions when the answer isn't obvious.",
+  "license": "MIT",
+  "keywords": [
+    "product-management",
+    "decision-making",
+    "product-strategy"
+  ]
+}

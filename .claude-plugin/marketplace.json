@@ -1,0 +1,13 @@
+{
+  "name": "product-judgment",
+  "owner": {
+    "name": "laurenmross"
+  },
+  "plugins": [
+    {
+      "name": "product-judgment",
+      "source": "./",
+      "description": "Five skills for making better product decisions when the answer isn't obvious."
+    }
+  ]
+}
